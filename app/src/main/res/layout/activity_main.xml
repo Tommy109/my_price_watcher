@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!-- Table layout for information
+    Name:
+    Initial Price:
+    Current Price:
+    Percentage Change:-->
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/tablerow_padding_right"
+                android:text="@string/item_name" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="my item's name" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/tablerow_padding_right"
+                android:text="@string/url" />
+
+            <TextView
+                android:id="@+id/url"
+                android:clickable="true"
+                android:autoLink="web"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/tablerow_padding_right"
+                android:text="@string/initial_price" />
+
+            <TextView
+                android:id="@+id/initialPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My item name" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/tablerow_padding_right"
+                android:text="@string/current_price" />
+
+            <TextView
+                android:id="@+id/currentPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My item name" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/tablerow_padding_right"
+                android:text="@string/percentage_change" />
+
+            <TextView
+                android:id="@+id/percentChange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My item name" />
+        </TableRow>
+
+    </TableLayout>
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_gravity="bottom"
+        android:text="@string/update"
+        android:onClick="updateClicked"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
